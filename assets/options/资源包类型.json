@@ -31,6 +31,22 @@
                     }
                 }
             ]
+        },
+        "资源包类型-tw": {
+            "type": "select",
+            "default_case": "tw",
+            "cases": [
+                {
+                    "name": "tw",
+                    "pipeline_override": {
+                        "资源包配置": {
+                            "attach": {
+                                "resource_package": "tw"
+                            }
+                        }
+                    }
+                }
+            ]
         }
     }
 }

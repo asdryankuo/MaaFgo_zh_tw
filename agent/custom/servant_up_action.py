@@ -241,7 +241,7 @@ class ExecuteServantUp(CustomAction):
     def _init_dirs(self):
         cfg = self._context.get_node_data("资源包配置") or {}
         pkg = str((cfg.get("attach") or {}).get("resource_package") or "base").strip()
-        layer = "cn" if pkg == "cn" else "base"
+        layer = pkg if pkg in ("cn", "tw") else "base"
         root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
         def _resolve(l, sub):

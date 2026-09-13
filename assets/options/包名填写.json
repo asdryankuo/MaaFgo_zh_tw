@@ -214,6 +214,36 @@
                             }
                         }
                     }
+                },
+                {
+                    "name": "台服",
+                    "label": "台服",
+                    "pipeline_override": {
+                        "打开游戏": {
+                            "action": {
+                                "type": "StartApp",
+                                "param": {
+                                    "package": "com.xiaomeng.fategrandorder/com.unity3d.player.UnityPlayerActivity"
+                                }
+                            }
+                        },
+                        "关闭游戏": {
+                            "action": {
+                                "type": "StopApp",
+                                "param": {
+                                    "package": "com.xiaomeng.fategrandorder/com.unity3d.player.UnityPlayerActivity"
+                                }
+                            }
+                        },
+                        "登录-关闭游戏": {
+                            "action": {
+                                "type": "StopApp",
+                                "param": {
+                                    "package": "com.xiaomeng.fategrandorder/com.unity3d.player.UnityPlayerActivity"
+                                }
+                            }
+                        }
+                    }
                 }
             ]
         }

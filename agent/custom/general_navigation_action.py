@@ -239,8 +239,8 @@ def locate_quest_near(img, tpl_bgr, px, py, radius=LOCAL_RADIUS, min_score=MT_MI
 # ---- 内联自 fallback_navigation(该模块已删除): 素材/坐标加载 + YOLO 检测 + 防误触 ----
 def resolve_quest_dir(root_dir, resource_package, template_path):
     """从运行时 template(map/{英文}/{关卡}.png) 推导导航素材目录
-    素材约定: 日服放 base, 国服放 cn → resource/{base|cn}/image/map/{英文}/"""
-    pkg = "cn" if resource_package == "cn" else "base"
+    素材约定: 日服放 base, 国服放 cn, 台服放 tw → resource/{base|cn|tw}/image/map/{英文}/"""
+    pkg = resource_package if resource_package in ("cn", "tw") else "base"
     folder = os.path.dirname(template_path).replace("\\", "/").strip("/")
     return os.path.join(root_dir, "resource", pkg, "image", *folder.split("/"))
 

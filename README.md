@@ -23,6 +23,52 @@
 
 ---
 
+## 快速开始
+
+### 1. 下载并解压
+
+前往 [Releases](https://github.com/xlxyvergil/MaaFgo/releases) 下载最新版 `MXU.zip`，完整解压后运行。MXU 是桌面客户端，无需浏览器。
+
+### 2. 安装 BBchannel
+
+1. 将 BBC 文件夹放入 MaaFgo 根目录。
+2. 将 `bbcdll` 文件夹内的文件复制到 `BBchannel\dist\BBchannel64`，替换同名文件。
+
+视频教程：
+
+- [完整使用教程](https://www.bilibili.com/video/BV1GsjW6wEej/)
+- [BBchannel 安装方法](https://www.bilibili.com/video/BV1c3DgBWEjN)
+
+### 3. 配置模拟器
+
+1. 将模拟器分辨率固定为 `1280 × 720`。
+2. 启动游戏并保持画面无遮挡。
+3. 在 MaaFgo 中选择对应资源包和渠道包名。
+4. 使用雷电 / MuMu 自动检测，或手动填写 ADB 端口后连接。
+
+### 4. 选择任务并启动
+
+普通刷本选择“原生自动战斗”后，可依次配置战斗次数、跳过剧情、是否使用 Chaldea
+队伍和助战方式。开启“是否使用 Chaldea 队伍”后，再将分享链接、队伍 ID、关卡 ID、
+本地 JSON 文件或缓存名称填入“Chaldea 队伍导入”；流程会先选择助战，到达编队页后
+自动应用队伍，再进入战斗。关闭该开关时保持原有进本行为。
+
+自动编队不会按等级或技能等级区分同名从者。运行前请将不希望选中的同名低等级从者
+移出从者列表（例如放入保管室），否则可能选中低等级从者并导致战斗方案无法正常执行。
+
+部分任务对起始页面有要求，请以界面中的任务说明为准。自动化运行期间不要手动点击或滚动画面。
+
+### 5. 可选：启用快速羁绊编队
+
+1. 从游戏主界面运行“构建个人从者礼装库”。
+2. 选择扫描“从者和礼装”“仅从者”或“仅礼装”；礼装可扫描全部 4/5 星或仅羁绊礼装。
+3. 等待任务完整扫描到列表底部。结果保存在 `config/Inventory/player_servants.json` 和 `config/Inventory/player_equips.json`。
+4. 在羁绊补齐任务中开启对应的本地库选项。
+
+扫描采用完成后原子替换；任务中止、超时或识别失败时，会保留已有的有效库存文件。
+
+---
+
 ## 功能概览
 
 ### ⚔️ 关卡与战斗
@@ -85,52 +131,6 @@
 - Windows 系统区域必须为**中文（简体，中国）**
 ---
 
-## 快速开始
-
-### 1. 下载并解压
-
-前往 [Releases](https://github.com/xlxyvergil/MaaFgo/releases) 下载最新版 `MXU.zip`，完整解压后运行。MXU 是桌面客户端，无需浏览器。
-
-### 2. 安装 BBchannel
-
-1. 将 BBC 文件夹放入 MaaFgo 根目录。
-2. 将 `bbcdll` 文件夹内的文件复制到 `BBchannel\dist\BBchannel64`，替换同名文件。
-
-视频教程：
-
-- [完整使用教程](https://www.bilibili.com/video/BV1GsjW6wEej/)
-- [BBchannel 安装方法](https://www.bilibili.com/video/BV1c3DgBWEjN)
-
-### 3. 配置模拟器
-
-1. 将模拟器分辨率固定为 `1280 × 720`。
-2. 启动游戏并保持画面无遮挡。
-3. 在 MaaFgo 中选择对应资源包和渠道包名。
-4. 使用雷电 / MuMu 自动检测，或手动填写 ADB 端口后连接。
-
-### 4. 选择任务并启动
-
-普通刷本选择“原生自动战斗”后，可依次配置战斗次数、跳过剧情、是否使用 Chaldea
-队伍和助战方式。开启“是否使用 Chaldea 队伍”后，再将分享链接、队伍 ID、关卡 ID、
-本地 JSON 文件或缓存名称填入“Chaldea 队伍导入”；流程会先选择助战，到达编队页后
-自动应用队伍，再进入战斗。关闭该开关时保持原有进本行为。
-
-自动编队不会按等级或技能等级区分同名从者。运行前请将不希望选中的同名低等级从者
-移出从者列表（例如放入保管室），否则可能选中低等级从者并导致战斗方案无法正常执行。
-
-部分任务对起始页面有要求，请以界面中的任务说明为准。自动化运行期间不要手动点击或滚动画面。
-
-### 5. 可选：启用快速羁绊编队
-
-1. 从游戏主界面运行“构建个人从者礼装库”。
-2. 选择扫描“从者和礼装”“仅从者”或“仅礼装”；礼装可扫描全部 4/5 星或仅羁绊礼装。
-3. 等待任务完整扫描到列表底部。结果保存在 `config/Inventory/player_servants.json` 和 `config/Inventory/player_equips.json`。
-4. 在羁绊补齐任务中开启对应的本地库选项。
-
-扫描采用完成后原子替换；任务中止、超时或识别失败时，会保留已有的有效库存文件。
-
----
-
 ## 维护文档
 
 - [Chaldea 自动编队使用说明](./docs/Chaldea自动编队使用说明.md)
@@ -167,6 +167,28 @@ MaaFgo/
 - **地图导航**：基于 YOLO / ONNX 的地图目标检测与轮巡导航
 
 提交资源或数据改动前，请先阅读对应的维护文档，并运行相关 JSON 校验与 `git diff --check`。
+
+### 本地开发 / 测试构建
+
+不想等 CI 出包，想在本机直接验证资源或 agent 改动时，可以自己组装一份可运行的 MXU：
+
+1. **拉取子模块**（OCR 模型等）：`git submodule update --init --recursive`
+2. **准备 Python 环境**（推荐 [uv](https://github.com/astral-sh/uv)）：
+   ```sh
+   uv venv .venv --python 3.12
+   uv pip install --python .venv/Scripts/python.exe -r requirements.txt json-with-comments
+   ```
+3. **下载 MaaFramework 核心**：从 [MaaFramework Releases](https://github.com/MaaXYZ/MaaFramework/releases) 下载对应平台的 `MAA-*.zip`，解压到仓库根目录的 `deps/`。
+4. **组装安装目录**：
+   ```sh
+   .venv/Scripts/python.exe tools/install-MXU.py v0.0.0-dev
+   ```
+   会在 `install-mxu/` 下生成完整的 `resource`、`options`、`tasks`、`agent`、`interface.json` 等文件。
+5. **放入 MXU 客户端**：从 [MXU Releases](https://github.com/xlxyvergil/MXU-scan_select-/releases) 下载对应平台版本，把可执行文件复制到 `install-mxu/` 下（例如 `install-mxu/MaaFgo.exe`）。
+6. **接上本地 Python 环境**：`install-mxu/interface.json` 里 `agent.child_exec` 默认是 `./python/python.exe`（内嵌 Python，CI 才会打包），本地测试没有这份内嵌 Python 时，把它改成第 2 步建的 venv 的绝对路径，例如 `C:/path/to/.venv/Scripts/python.exe`。
+7. 双击 `install-mxu/` 下的可执行文件即可启动，选择资源包、连接模拟器测试。之后改了 `assets/` 底下的文件，直接覆盖到 `install-mxu/` 对应路径重开即可，不用每次重新跑第 4 步。
+
+此流程只是本机验证用的临时安装，`install-mxu/` 不应提交到仓库；正式分发仍以 CI 产出的 Release 为准。
 
 ---
 

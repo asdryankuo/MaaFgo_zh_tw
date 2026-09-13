@@ -309,7 +309,7 @@ class ExecuteBoxTask(CustomAction):
         """按资源包配置初始化礼物盒模板目录。"""
         cfg = self._context.get_node_data("资源包配置") or {}
         pkg = str((cfg.get("attach") or {}).get("resource_package") or "base").strip()
-        layer = "cn" if pkg == "cn" else "base"
+        layer = pkg if pkg in ("cn", "tw") else "base"
         root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
         def _resolve(resource_layer):

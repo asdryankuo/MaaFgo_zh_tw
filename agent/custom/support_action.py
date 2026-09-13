@@ -23,7 +23,7 @@
   4. 无框满足 -> 失败
 
 素材路径约定(相对 MaaFgo 根目录):
-  pkg   = "cn" if resource_package=="cn" else "base"
+  pkg   = resource_package if resource_package in ("cn", "tw") else "base"
   servant_face : resource/{pkg}/image/servant_face/f_*.png        (158x158, 已有)
   lizhuang     : resource/{pkg}/image/lizhuang/                    (礼装模板, 待放)
   np_level     : resource/{pkg}/image/np_level/ch|jp/              (宝具模板, 待放)
@@ -689,7 +689,7 @@ class SupportAction(CustomAction):
                          f"宝具={np_level} 等级={level}")
 
             resource_package = str(context.get_node_data("资源包配置")["attach"]["resource_package"])
-            pkg = "cn" if resource_package == "cn" else "base"
+            pkg = resource_package if resource_package in ("cn", "tw") else "base"
             base_dir = _image_dir(pkg)
             # 英灵头像/礼装固定放 base, 不用 pkg 区分
             face_dir = _image_dir("base", "servant_face")

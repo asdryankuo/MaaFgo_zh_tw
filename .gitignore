@@ -454,6 +454,7 @@ deps/tools/*
 !deps/tools/*.schema.json
 build
 install
+install-mxu
 
 # BBchannel - 完全禁止上传
 BBchannel/

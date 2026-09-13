@@ -378,7 +378,7 @@ class AutoFormationFromChaldea(CustomAction):
     def _init_paths(self):
         config = self.context.get_node_data("资源包配置") or {}
         package = str((config.get("attach") or {}).get("resource_package") or "base").strip()
-        layer = "cn" if package == "cn" else "base"
+        layer = package if package in ("cn", "tw") else "base"
         roots = []
         for root in (_PROJECT_DIR, os.path.dirname(_PROJECT_DIR)):
             for current_layer in (layer, "base"):

@@ -50,6 +50,16 @@
       "option": [
         "资源包类型-jp"
       ]
+    },
+    {
+      "name": "台服(繁体中文)",
+      "path": [
+        "resource/base",
+        "resource/tw"
+      ],
+      "option": [
+        "资源包类型-tw"
+      ]
     }
   ],
   "group": [
